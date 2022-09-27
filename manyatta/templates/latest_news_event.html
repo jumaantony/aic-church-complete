@@ -1,0 +1,18 @@
+{% load static %}
+
+{% for news_event in latest_news_event %}
+        <!-- single news & events -->
+    <div class="d-flex mb-2">
+        <div class="side-bar-date-cont fw-bold text-light bg-danger rounded fs-4 text-wrap" style="width:60px; height: 65px; padding-bottom: 5px;">
+            {{ news_event.publish|date:"M d" }}
+        </div>&nbsp;
+
+        <a href="{% url 'manyatta:news_events_detail' news_event.slug %}" class="text-decoration-none text-capitalize fw-bold sermon-side-bar-link pt-1 my-3">
+            {{news_event.title}}
+        </a>
+    </div>
+{% empty %}
+
+    <h5 class="fw-bold"> There are no news or events at the momment. Check in Later</h5>
+
+{% endfor %}

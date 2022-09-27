@@ -1,0 +1,114 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+
+    <!-- header -->
+    <div class="about-header position-relative">
+        <h1 class="header-text text-light position-absolute top-50 start-50 translate-middle">About Us</h1>
+    </div>
+
+
+    <div class="about-cont row mt-2 container-fluid justify-content-center">
+        <div class="col-lg-4 col-md-12 col-sm-10">
+            <img src="{% static 'images/pastor.png' %}" class="img-fluid mt-lg-5 pt-lg-5 mt-md-5 pt-md-5" alt="pastor">
+        </div>
+
+        <div class="col-lg-8 col-md-12 col-sm-10">
+            <h3 class="text-danger fw-bold">
+                About Us
+            </h3>
+
+            <h4 class="fw-bold text-start">Brief History</h4>
+            <p class="text-start">
+                AIC Manyatta Local Church Foundation Stone was laid by Bishop Rev. Simeoon Otiende on 20th October 2010 and officially dedicated to God on 16th April 2017 by Rev. Philip O. Osenya. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum
+                aperiam sit, blanditiis mollitia natus, explicabo aspernatur quasi quo molestiae quod ea quia modi porro. Nisi ipsa ipsum ab tempora.
+                <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aspernatur corporis obcaecati. Nihil, consequuntur aspernatur alias sunt, perspiciatis veritatis expedita tempora mollitia quia nostrum, repudiandae modi nisi
+                vero nulla vitae!
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+
+                    <img src="{% static 'images/mission.png' %}" alt="mission img" class="mx-auto d-block">
+                    <h3 class="text-danger fw-bold mt-2"> Our Mission</h3>
+
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p>To prepare God's people for works of service through vibrant worship, intimate fellowship, effective service and transforming witness.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            Ephesians <cite title="Source Title">4:12</cite>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{% static 'images/value.png' %}" alt="value img" class="mx-auto d-block">
+
+                    <h3 class="text-danger fw-bold mt-2"> Our Core Value</h3>
+
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p>Love</p>
+                        </blockquote>
+                    </figure>
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{% static 'images/vision.png' %}" alt="vision img" class="mx-auto d-block">
+
+                    <h3 class="text-danger fw-bold mt-2"> Our Vision</h3>
+
+                    <figure class="text-center">
+                        <blockquote class="blockquote">
+                            <p>To be a church where believers in Christ are at peace with God and man.</p>
+                        </blockquote>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Pastors -->
+    <div class="row justify-content-around container mt-4 gx-5 mx-auto">
+
+        <h3 class="text-danger text-center fw-bold mb-5">
+            Our Pastors
+        </h3>
+
+        <div class="col-lg-4 col-md-4 col-sm-10 mb-5">
+
+            <div class="card pastor-cont border-0 hvr-curl-bottom-right hvr-grow" style="width: 18rem;">
+                <img src="{% static 'images/pastor.png' %}" alt="" class="card-img-top mt-3 border-1 border-bottom-0 border-top border-start border-end border-danger rounded-top">
+
+                <div class="card-body bg-dark text-light rounded-bottom">
+                    <h5 class="card-title fw-bolder text-danger">Juma Antony</h5>
+                    <p class="card-text">Pastor in Charge</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-10 mb-5">
+
+            <div class="card pastor-cont border-0 hvr-curl-bottom-right hvr-grow" style="width: 18rem;">
+                <img src="{% static 'images/pastor.png' %}" alt="" class="card-img-top mt-3 border-1 border-bottom-0 border-top border-start border-end border-danger rounded-top">
+
+                <div class="card-body bg-dark text-light rounded-bottom">
+                    <h5 class="card-title fw-bolder text-danger">Juma Antony</h5>
+                    <p class="card-text">Assistant Pastor </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% include 'ministry-programs.html' %}
+       
+{% endblock %}

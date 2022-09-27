@@ -1,0 +1,14 @@
+{% load static %}
+
+{% for sermon in latest_sermons %}
+    <div class="d-flex mb-2">
+        <img src="{% if sermon.feature_img %}{{ sermon.feature_img.url }}{% else %}{% static 'images/no_img.png' %}{% endif %}" class="side-bar-img rounded float-start" alt="sermon img">&nbsp;
+        <a href="{{ sermon.get_absolute_url }}" class="text-decoration-none text-capitalize fw-bold sermon-side-bar-link pt-1">
+                {{ sermon.title }}
+        </a>
+    </div>
+{% empty %}
+
+    <h5 class="fw-bold"> There are no posts yet</h5>
+
+{% endfor %}

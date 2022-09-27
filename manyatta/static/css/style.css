@@ -1,0 +1,467 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Preloader */
+
+#loader {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../images/preloader.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+
+#cont {
+    display: none;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.nav-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.item1,
+.item2,
+.item3 {
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.item1 {
+    background-image: url(../images/c1.png);
+    width: 100%;
+}
+
+.item2 {
+    background-image: url(../images/c2.png);
+    width: 100%;
+}
+
+.item3 {
+    background-image: url(../images/c3.png);
+    width: 100%;
+}
+
+.item1::before,
+.item2::before,
+.item3::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(5, 5, 39, 0.5);
+}
+
+.carousel-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9vw;
+    font-weight: bold;
+    position: inherit;
+}
+
+.carousel-small {
+    position: inherit;
+}
+
+a.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+a.nav-link:hover {
+    color: red;
+    transition: 0.3s;
+    font-weight: bolder;
+}
+
+a.nav-link:active {
+    color: brown;
+}
+
+.ministry img {
+    -webkit-filter: grayscale(40%);
+    filter: grayscale(40%);
+    transition: all 0.3s;
+}
+
+.ministry-cont {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 1.5);
+}
+
+.ministry-img {
+    width: 250px;
+    height: 250px;
+}
+
+.ministry-overlay {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 1rem 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.ministry-overlay {
+    transition: all 0.3s;
+}
+
+.ministry-overlay {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.ministry-overlay {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.ministry:hover img {
+    opacity: 0.3;
+    box-shadow: 0 1.5px 5px rgb(0 0 0 / 1.5);
+}
+
+.ministry:hover .ministry-overlay {
+    opacity: 1;
+}
+
+.ministry:hover .ministry-overlay li {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.ministry-title {
+    color: black;
+    align-self: center;
+}
+
+.ministry-title:hover {
+    color: red;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+}
+
+.tns-nav {
+    display: none;
+}
+
+.sermon-cont {
+    box-shadow: 0 1.5px 5px rgb(0 0 0 / 1.5);
+}
+
+.sermon-title {
+    color: black;
+}
+
+.sermon-title:hover {
+    color: red;
+    transition: .5s;
+}
+
+.programs {
+    height: auto;
+    background-image: url(../images/program.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.programs::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(224, 63, 57, 0.356);
+}
+
+.program-cont {
+    position: inherit;
+}
+
+.program-img {
+    width: 150px;
+    height: 150px;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    border-color: red;
+    outline: 0;
+    color: black;
+}
+
+.news-event-img {
+    box-shadow: 0 1.5px 5px rgb(0 0 0 / 1.5);
+}
+
+.news-event-body-cont {
+    box-shadow: 0 1.5px 5px rgb(0 0 0 / 1.5);
+    margin-top: -30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.calender-clock {
+    margin-top: -25px;
+}
+
+footer {
+    height: auto;
+    background-image: url(../images/footer.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(5, 5, 39, 0.3);
+}
+
+.footer-cont {
+    position: inherit;
+}
+
+.quick-link,
+.quick-link-title {
+    color: white;
+}
+
+.quick-link:hover,
+.quick-link-title:hover {
+    color: red;
+    transition: 1s;
+}
+
+.social-icon {
+    padding: 10px;
+}
+
+.fa-twitter,
+.fa-facebook-f {
+    background-color: white;
+}
+
+.fa-facebook-f {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.fa-twitter:hover,
+.fa-facebook-f:hover {
+    color: white;
+    background-color: #0d6efd;
+    transition: 1s;
+}
+
+.fa-youtube {
+    background-color: white;
+    color: red;
+}
+
+.fa-youtube:hover {
+    color: white;
+    background-color: red;
+    transition: 1s;
+}
+
+
+/* About page */
+
+.about-header {
+    height: 50vh;
+    width: 100%;
+    background-image: url(../images/c2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(5, 5, 39, 0.5);
+}
+
+.header-text {
+    font-weight: bolder;
+    font-size: 8vw;
+    position: inherit;
+    padding-top: 120px;
+    position: relative;
+}
+
+.youth-ministry-header {
+    height: 35vh;
+    width: 100%;
+    background-image: url(../images/c2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.youth-ministry-header::before,
+.sermon-header::before,
+.contact-us-header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(5, 5, 39, 0.5);
+}
+
+.ministry-header-text {
+    font-weight: bolder;
+    font-size: 5vw;
+    position: inherit;
+    padding-top: 120px;
+    position: relative;
+}
+
+.ministry-icon-cont {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.ministry-icon {
+    padding-top: 25px;
+}
+
+.side-bar-img {
+    width: 60px;
+    height: 60px;
+}
+
+.sermon-side-bar-link {
+    color: black;
+}
+
+.sermon-side-bar-link:hover {
+    color: red;
+    transition: .5s;
+}
+
+.side-quick-link-title {
+    color: black;
+}
+
+.side-quick-link-title:hover {
+    color: red;
+    transition: .5s;
+}
+
+.sermon-header {
+    height: 35vh;
+    width: 100%;
+    background-image: url(../images/sermon-header.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-item {
+    margin: 5px;
+}
+
+.page-link {
+    background-color: black;
+    color: red;
+}
+
+.contact-us-header {
+    height: 35vh;
+    width: 100%;
+    background-image: url(../images/c1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-details {
+    height: auto;
+    background-image: url(../images/c1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+}
+
+.contact-details::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(156, 6, 6, 0.5);
+    border-radius: 10px;
+}
+
+.cnct-details {
+    position: inherit;
+}
+
+.map-cont {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 1.5);
+}

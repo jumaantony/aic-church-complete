@@ -1,0 +1,88 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} {{ newsevent.title }} {% endblock %}
+
+{% block content %}
+
+<div class="row container-fluid justify-content-center mx-auto mt-2">
+
+    <h1 class="fw-bold text-capitalize text-start mt-5 pt-5">
+        {{newsevent.title}}
+    </h1>
+
+    <hr class="text-danger">
+
+    <!-- sermon- detail-cont-->
+    <div class="col-lg-8 col-md-8 col-sm-12 text-start">
+
+        {% autoescape off %}
+        {{ newsevent.content | capfirst | linebreaks }}
+        {% endautoescape %}
+
+    </div>
+
+    <!-- side bar -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+
+        {% if newsevent.organizer and newsevent.commence_date and newsevent.ending_date and newsevent.entry_fee %}
+            <!-- event information -->
+            <div class="border-1 text-start border-start border-end border-top border-bottom rounded-top mb-3">
+                <h3 class="text-light bg-danger text-center p-2 rounded-top fw-bold">
+                    Event Details
+                </h3>
+
+                <div class="p-2">
+                    <h6>
+                        <span class="fw-bold">
+                            Organizer: &nbsp;
+                        </span>
+
+                        <span class="text-muted">
+                            {{newsevent.organizer}}
+                        </span>
+                    </h6>
+
+                    <hr class="text-danger">
+
+                    <h6>
+                        <span class="fw-bold">
+                            Commencing: &nbsp;
+                        </span>
+
+                        <span class="text-muted">
+                            {{newsevent.commence_date}}
+                        </span>
+                    </h6>
+
+                    <hr class="text-danger">
+
+                    <h6>
+                        <span class="fw-bold">
+                            Ending: &nbsp;
+                        </span>
+
+                        <span class="text-muted">
+                            {{newsevent.ending_date}}
+                        </span>
+                    </h6>
+
+                    <hr class="text-danger">
+
+                    <h6>
+                        <span class="fw-bold">
+                           Entry Fee: &nbsp;
+                        </span>
+
+                        <span class="text-muted">
+                            {{newsevent.entry_fee}}
+                        </span>
+                    </h6>
+                </div>
+            </div>
+        {% endif %}
+        {% include 'sidebar-cont.html' %}
+
+    </div>
+</div>
+       
+{% endblock %}

@@ -1,0 +1,221 @@
+{% load static %}
+<!-- Ministries -->
+
+<h6 class="fw-bold text-danger mt-4">MINISTRIES</h6>
+<h1 class="fw-bolder">Our Ministries</h1>
+
+<h5 class="text-center fw-bold">Find A place where you belong, a place where you can serve or be served</h5>
+
+<div class="container-fluid my-slider d-flex justify-content-center p-1">
+
+    <!-- Men ministry -->
+    <div class="ministry text-center px-lg-5 px-3">
+        <div class="ministry-cont rounded pb-2">
+            <div class="mb-3 position-relative">
+
+                <a class="d-block" href="{% url 'manyatta:mens-ministry' %}">
+                    <!-- Product Image -->
+                    <img class="w-100 h-100 rounded-top" src="{% static 'images/men.png' %}" alt="youth image">
+                </a>
+
+                <div class="ministry-overlay">
+                    <a href="{% url 'manyatta:mens-ministry' %}" class="btn btn-md btn-dark btn-outline-light fw-bold"> Learn More</a>
+                </div>
+            </div>
+
+            <div class="bg-highlight">
+                <h6>
+                    <!-- Product title -->
+                    <a href="{% url 'manyatta:mens-ministry' %}" class="text-decoration-none ministry-title fw-bold mb-2">
+                        Men's Ministry
+                    </a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Women ministry -->
+    <div class="ministry text-center px-lg-5 px-3">
+        <div class="ministry-cont rounded pb-2">
+            <div class="mb-3 position-relative">
+
+                <a class="d-block" href="{% url 'manyatta:womens-ministry' %}">
+                    <!-- Product Image -->
+                    <img class="w-100 h-100 rounded-top" src="{% static 'images/women.png' %}" alt="youth image">
+                </a>
+
+                <div class="ministry-overlay">
+                    <a href="{% url 'manyatta:womens-ministry' %}" class="btn btn-md btn-dark btn-outline-light fw-bold"> Learn More</a>
+                </div>
+            </div>
+
+            <div class="bg-highlight">
+                <h6>
+                    <!-- Product title -->
+                    <a href="{% url 'manyatta:womens-ministry' %}" class="text-decoration-none ministry-title fw-bold mb-2">
+                        Women's Ministry
+                    </a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Youth ministry -->
+    <div class="ministry text-center px-lg-5 px-3">
+        <div class="ministry-cont rounded pb-2">
+            <div class="mb-3 position-relative">
+
+                <a class="d-block" href="{% url 'manyatta:youth-ministry' %}">
+                    <!-- Product Image -->
+                    <img class="w-100 h-100rounded-top" src="{% static 'images/youth.png' %}" alt="youth image">
+                </a>
+
+                <div class="ministry-overlay">
+                    <a href="{% url 'manyatta:youth-ministry' %}" class="btn btn-md btn-dark btn-outline-light fw-bold"> Learn More</a>
+                </div>
+            </div>
+
+            <div class="bg-highlight">
+                <h6>
+                    <!-- Product title -->
+                    <a href="{% url 'manyatta:youth-ministry' %}" class="text-decoration-none ministry-title fw-bold mb-2">
+                        Youth's Ministry
+                    </a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- praisenworship-->
+    <div class="ministry text-center px-lg-5 px-3">
+        <div class="ministry-cont rounded pb-2">
+            <div class="mb-3 position-relative">
+
+                <a class="d-block" href="{% url 'manyatta:praisenworship-ministry' %}">
+                    <!-- Product Image -->
+                    <img class="w-100 h-100 rounded-top" src="{% static 'images/praisenworship.png' %}" alt="youth image">
+                </a>
+
+                <div class="ministry-overlay">
+                    <a href="{% url 'manyatta:praisenworship-ministry' %}" class="btn btn-md btn-dark btn-outline-light fw-bold"> Learn More</a>
+                </div>
+            </div>
+
+            <div class="bg-highlight">
+                <h6>
+                    <!-- Product title -->
+                    <a href="{% url 'manyatta:praisenworship-ministry' %}" class="text-decoration-none ministry-title fw-bold mb-2">
+                        Praise & Worship Ministry
+                    </a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sunday School-->
+    <div class="ministry text-center px-lg-5 px-3">
+        <div class="ministry-cont rounded pb-2">
+            <div class="mb-3 position-relative">
+
+                <a class="d-block" href="{% url 'manyatta:sundayschool-ministry' %}">
+                    <!-- Product Image -->
+                    <img class="w-100 h-100 rounded-top" src="{% static 'images/sundayschool.png' %}" alt="youth image">
+                </a>
+
+                <div class="ministry-overlay">
+                    <a href="{% url 'manyatta:sundayschool-ministry' %}" class="btn btn-md btn-dark btn-outline-light fw-bold"> Learn More</a>
+                </div>
+            </div>
+
+            <div class="bg-highlight">
+                <h6>
+                    <!-- Product title -->
+                    <a href="{% url 'manyatta:sundayschool-ministry' %}" class="text-decoration-none ministry-title fw-bold mb-2">
+                        Sunday School Ministry
+                    </a>
+                </h6>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div id="controls">
+    <div class="text-center">
+        <i class="auto d-none text-light"></i>
+        <i class="btn btn-outline-0 previous fa fa-chevron-left p-2 text-danger" aria-hidden="true"></i>
+        <i class="btn btn-outline-0 next fa fa-chevron-right p-2 text-danger" aria-hidden="true"></i>
+    </div>
+</div>
+
+<!-- Programs -->
+<div class="programs container-fluid mt-3 mb-2">
+
+    <div class="program-cont justify-content-center row p-2">
+        <div class="col-lg-5 col-md-5 col-12 mt-4">
+            <h3 class="text-light fw-bold">
+                Join Us Every Sunday to Worship and Fellowship Together
+            </h3>
+
+            <img src="{% static 'images/pastor1.png' %}" class="rounded-circle program-img" alt="program img">
+
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-12 mt-3">
+
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <i class="fa-solid fa-church"></i>&nbsp Main Service
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body fw-bold">
+                            First Service - 07:00 Am - 09:00 Am <br><br> Second Service - 09:30 Am - 11:30 Am
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <i class="fa-solid fa-person-praying"></i>&nbsp Wednesday Fellowship  
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body fw-bold">Wednesday Fellowship- 5:00 Pm - 6:00 Pm</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <i class="fa-solid fa-hands-holding-child"></i>&nbsp Sunday School
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body fw-bold">Sunday 07:00 Am - 09:00 Am</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            <i class="fa-solid fa-children"></i>&nbsp Youth
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body fw-bold">Sunday 12:00 - 2:00 Pm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

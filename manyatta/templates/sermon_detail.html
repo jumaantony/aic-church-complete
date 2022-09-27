@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %}
+{{ sermon.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="row container-fluid justify-content-center mx-auto mt-2">
+
+    <h1 class="fw-bold text-capitalize text-start mt-5 pt-5">
+        {{ sermon.title }}
+    </h1>
+
+    <hr class="text-danger">
+
+    <div class="d-inline text-start">
+        <i class="fa-solid fa-user text-danger"></i>&nbsp
+        <span class="fw-bold fst-italic">{{ sermon.preacher }}</span> &nbsp&nbsp
+
+        <i class="fa-solid fa-book-bible text-danger"></i>&nbsp
+        <span class="fw-bold fst-italic">{{ sermon.readings }} </span> &nbsp&nbsp
+
+        <i class="fa-solid fa-clock text-danger"></i>&nbsp
+        <span class="fw-bold fst-italic">{{ sermon.publish }}</span>
+
+    </div>
+
+    <!-- sermon- detail-cont-->
+    <div class="col-lg-8 col-md-8 col-sm-12 text-start">
+        {% autoescape off %}
+        {{ sermon.content | capfirst | linebreaks }}
+        {% endautoescape %}
+    </div>
+
+    <!-- sidebar -->
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        {% include 'sidebar-cont.html' %}
+    </div>
+</div>
+       
+{% endblock %}

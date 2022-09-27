@@ -1,0 +1,93 @@
+ {% extends 'base.html' %} 
+ {% load static %}
+ {% load manyatta_tags %}
+ {% block title %} AIC Manyatta {% endblock %}
+
+ {% block content %}
+
+    <!-- Carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade h-25" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item item1 active position-relative">
+                <h1 class="text-light carousel-text position-absolute top-50 start-50 translate-middle">
+                    AIC - Manyatta
+                </h1>
+            </div>
+
+            <div class="carousel-item item2 position-relative">
+                <h1 class="text-light carousel-text position-absolute top-50 start-50 translate-middle">
+                    Together we will rise
+                </h1>
+            </div>
+
+            <div class="carousel-item item3 position-relative">
+                <h1 class="text-light carousel-text position-absolute top-50 start-50 translate-middle">
+                    With God All is Possible
+                </h1>
+
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <div class="container-fluid">
+        <!-- About us-->
+        <div class="row justify-content-center mt-2 mx-auto">
+            <!-- <h3 class="text-danger karibu fst-italic fw-bold">Karibu</h3>
+            <h1 class="fw-bolder">African Inland Church of Kenya - Manyatta</h1> -->
+
+            <div class="col-lg-5 col-md-6 col-sm-12 my-auto">
+                <h4 class="text-danger fw-bold">Who we are</h4>
+                <p class="fs-5">AIC is a Church whose beleivers are at peace with God and mankind</p>
+                <p class="fs-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dicta sint vero ratione aliquid excepturi ad necessitatibus ipsa quam accusamus debitis quia provident, est impedit ullam expedita distinctio fugit et. Vel dicta sint vero ratione aliquid excepturi
+                    ad necessitatibus ipsa quam accusamus debitis quia provident, est impedit ullam expedita distinctio fugit et Vel dicta sint vero ratione aliquid excepturi ad necessitatibus ipsa quam accusamus debitis quia provident, est impedit
+                    ullam
+                </p>
+
+                <a href="about.html" class="btn btn-md btn-danger btn-outline-dark fw-bold border-0"> Learn More</a>
+            </div>
+
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <img src="{% static 'images/c1.png' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+
+        <!-- Sermons -->
+        <div class="container-fluid">
+
+            <div class="row justify-content-center gx-4">
+
+                <h6 class="fw-bold text-danger mt-lg-4 mt-2">SERMONS</h6>
+                <h1 class="fw-bolder">Latest Sermons</h1>
+
+                {% home_latest_sermons %}
+
+            </div>
+
+        </div>
+
+        {% include 'ministry-programs.html' %}
+
+        <!-- Latest News & Events -->
+        <div class="container-fluid row justify-content-center mx-auto mb-3">
+            <h6 class="fw-bold text-danger mt-4">LATEST NEWS & EVENTS</h6>
+            <h1 class="fw-bolder">Latest News & Events</h1>
+            
+            {% home_latest_news_event %}
+
+        </div>
+
+    </div>
+        
+ {% endblock %}

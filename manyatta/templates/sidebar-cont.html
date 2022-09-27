@@ -1,0 +1,32 @@
+{% load manyatta_tags %}
+
+<!--&lt;!&ndash; search &ndash;&gt;-->
+<!--<div class="p-2 border-1 border-start border-end border-top border-bottom rounded mb-3">-->
+<!--    <form class="d-flex" role="search">-->
+<!--        <input class="form-control me-1 border-dangers" type="search" placeholder="Search" aria-label="Search">-->
+<!--        <button class="btn btn-md btn-outline-danger" type="submit">Search</button>-->
+<!--    </form>-->
+<!--</div>-->
+
+<!-- recent posts -->
+<div class="p-2 border-1 border-start border-end border-top border-bottom rounded mb-3">
+    <h3 class="fw-bold">
+        Latest Sermons
+    </h3>
+    <hr>
+
+    <!-- single recent sermon-->
+    {% show_latest_sermons %}
+
+</div>
+
+<div class="p-2 border-1 border-start border-end border-top border-bottom rounded mb-3">
+    <h3 class="fw-bold">
+        Latest News & Events
+    </h3>
+    <hr>
+
+    {% show_latest_news_event %}
+
+
+</div>

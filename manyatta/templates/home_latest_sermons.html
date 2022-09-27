@@ -1,0 +1,36 @@
+{% load static %}
+
+{% for sermon in latest_sermons %}
+    <!-- single sermon-->
+    <div class="col-lg-3 col-md-4 col-10 mt-3">
+        <div class="card w-100 sermon-cont" data-aos="fade-up" data-aos-duration="1000">
+            <img src="{% if sermon.feature_img %}{{ sermon.feature_img.url }}{% else %}{% static 'images/no_img.png' %}{% endif %}" class="card-img-top img hvr-shrink" alt="sermon feature img">
+            <div class=" card-body text-center">
+                <h4 class="card-title">
+                    <a href="{{ sermon.get_absolute_url }}" class="text-decoration-none text-capitalize sermon-title fw-bold" target="_blank" rel="noopener noreferrer">
+                        {{ sermon.title }}
+                    </a>
+                </h4>
+                <p class="card-text">
+                    <i class="fa-solid fa-user text-danger"></i>&nbsp
+                    <span class="fw-bold fst-italic">{{ sermon.preacher }}</span><br>
+
+                    <i class="fa-solid fa-book-bible text-danger"></i>&nbsp
+                    <span class="fw-bold fst-italic">{{ sermon.readings }}</span><br>
+
+                    <i class="fa-solid fa-clock text-danger"></i>&nbsp
+                    <span class="fw-bold fst-italic">{{ sermon.publish|date}}</span> <br>
+
+                </p>
+                <a href="{{ sermon.get_absolute_url }}" class="btn btn-danger btn-md btn-outline-dark border-0 fw-bold">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+{% empty %}
+    <div class="col">
+        There are no Sermons at the Momment. Check in Later
+    </div
+{% endfor %}
+

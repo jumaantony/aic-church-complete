@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} News & Events {% endblock %}
+
+{% block content %}
+
+        <!-- header -->
+        <div class="sermon-header position-relative">
+            <h5 class="ministry-header-text text-light">News & Events </h5>
+        </div>
+
+
+        <div class="row container justify-content-center  mx-auto mt-2 mb-2">
+
+            {% for news_event in newsevent_list %}
+                <!-- single news&event -->
+                <div class="col-lg-4 col-md-4 col-10 mt-3">
+                    <div class="card w-100 news-event-cont border-0" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <img src="{% if news_event.feature_img %}{{ news_event.feature_img.url }}{% else %}{% static 'images/no_img.png' %}{% endif %}" class="card-img-top img news-event-img " alt="sermon feature img">
+
+                        <div class=" card-body text-center news-event-body-cont bg-light hvr-float">
+                            <div class="calender-clock text-start bg-danger p-1 rounded fw-bold text-light">
+                                <i class="fa-solid fa-calendar-days"></i>&nbsp &nbsp {{ news_event.publish }}
+                            </div>
+                            <h4 class="card-title mt-3">
+                                <a href="{% url 'manyatta:news_events_detail' news_event.slug %}" class="text-decoration-none text-capitalize sermon-title fw-bold" rel="noopener noreferrer">
+                                    {{news_event.title}}
+                                    </a>
+                            </h4>
+
+                            <p class="card-text text-start">
+                                {% autoescape off %}
+                                    {{ news_event.content|capfirst|linebreaks| truncatechars:80 }}
+                                {% endautoescape %}
+                            </p>
+                            <a href="{% url 'manyatta:news_events_detail' news_event.slug %}" class="btn btn-danger btn-md btn-outline-dark border-0 fw-bold">
+                                    Learn More
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-lg-4 col-md-4 col-10 mt-3">
+                    <h3 class="fw-bold"> There is no news or event yet. Please Check in Later </h3>
+                </div>
+            {% endfor %}
+
+            <div class="d-inline mt-2">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}" class="text-decation-none btn btn-dark btn-outline-light border-0 rounded-start fw-bold">Previous</a>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                    <a href="{{ page_obj.next_page_number }}" class="text-decation-none btn btn-dark btn-outline-light border-0 rounded-end fw-bold">Next</a>
+                {% endif %}
+            </div>
+        </div>
+
+       
+{% endblock %}

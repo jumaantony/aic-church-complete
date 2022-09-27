@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Search Results {% endblock %}
+
+{% block content %}
+<div class="row container-fluid justify-content-center mx-auto" style="margin-top: 100px;">
+    <div class="col-lg-8 col-md-8 col-sm-12 text-start">
+        {% if query %}
+            <h3 class="fw-bold">Search Query Containing <span class="fst-italic">'{{query}}'</span></h3>
+            <hr>
+            <h5 class="fw-bold">
+                {% with search_results.count as total_results %}
+                    Found {{ total_results }} result {{ total_results|pluralize }}
+                {% endwith %}
+            </h5>
+            {% for sermon in search_results %}
+                <h4 class="fw-bold">
+                    <a href="{{ sermon.get_absolute_url }}" class="sermon-title text-decoration-none">
+                    {{ sermon.title}}
+                    </a>
+                </h4>
+                <p class="fs-7">
+                    {% autoescape off %}
+                        {{ sermon.content | truncatechars:100 }}
+                    {% endautoescape %}
+                </p>
+
+            {% endfor %}
+        {% else %}
+            <p>Please search again. No result found for <b>"{{query}}"</b>.</p>
+        {% endif %}
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        {% include 'sidebar-cont.html' %}
+    </div>
+</div>
+
+{% endblock %}

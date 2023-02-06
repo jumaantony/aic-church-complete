@@ -311,7 +311,7 @@ DATABASES = {
         'USER': 'aic',
         'PASSWORD': 'aic',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
